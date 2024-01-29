@@ -1,3 +1,27 @@
+.footer {
+  bottom: 0;
+  position: absolute;
+  background-color: #000000;
+  width: 100%;
+  left: 0;
+  height: 13em;
+  text-align: center;
+}
+
+.footer img {
+  margin-top: 5em;
+}
+
+.footer__copyright {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 34px;
+  text-align: right;
+  color: white;
+  text-align: center;
+}
+
 .nav {
   display: flex;
   justify-content: space-between;

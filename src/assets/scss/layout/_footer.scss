@@ -1,0 +1,22 @@
+@import '../abstracts/colors';
+@import '../abstracts/mixin';
+
+.footer {
+    bottom: 0;
+    position: absolute;
+    background-color: $dark-color;
+    width: 100%;
+    left: 0;
+    height: 13em;
+    text-align: center;
+
+    img {
+        margin-top: 5em;
+    }
+
+    &__copyright {
+        @include title-small;
+        color: white;
+        text-align: center;
+    }
+}
