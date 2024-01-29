@@ -1,0 +1,12 @@
+@import 'base/index';
+@import 'layout/index';
+
+* {
+   box-sizing: border-box;
+   font-family: $font;
+}
+body {
+   margin: 0 auto;
+   padding: 45px;
+   max-width: 1440px;
+}

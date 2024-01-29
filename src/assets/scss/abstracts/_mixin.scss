@@ -1,0 +1,16 @@
+@import '../base/index';
+
+@mixin title-small {
+    font-family: $font;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 34px;
+    text-align: right;
+}
+
+@mixin title-medium($size) {
+    font-family: $font;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 34px;
+}
