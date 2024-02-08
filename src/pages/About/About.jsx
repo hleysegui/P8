@@ -1,6 +1,11 @@
+import Banner from "../../components/reusable/Banner"
+import bannerAbout from '/src/assets/images/banner-about.png'
+
 function About() {
     return (
-        <h1>About</h1>
+        <main>
+            <Banner image={ bannerAbout } text=""/>
+        </main>
     )
 }
 

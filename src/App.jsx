@@ -3,13 +3,10 @@ import About from "./pages/About/About"
 import Home from "./pages/Home/Home"
 import Logement from "./pages/Logement/Logement"
 import Error404 from "./pages/Error/Error404"
-import Navbar from "./components/Navbar"
-
  
 function App() {
 
   return (
-  
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />

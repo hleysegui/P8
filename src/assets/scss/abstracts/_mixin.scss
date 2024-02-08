@@ -8,9 +8,18 @@
     text-align: right;
 }
 
-@mixin title-medium($size) {
+@mixin title-medium($size, $line-height) {
     font-family: $font;
-    font-size: 18px;
+    font-size: $size;
     font-weight: 700;
-    line-height: 34px;
+    line-height: $line-height;
+}
+
+@mixin banner-shadow {
+    box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+@mixin banner-text-shadow {
+    box-shadow: 0px 4px 4px 0px #00000040;
+
 }

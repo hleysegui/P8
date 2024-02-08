@@ -1,0 +1,26 @@
+.thumb {
+    width: 29%;
+    height: 26%;
+
+    &__title {
+        display: block;
+        color: $white-color;
+        @include title-medium(18px, 27.67px);
+        position: relative;
+        top: 18em;
+        left: 1em;
+        width: 87%;
+    
+    }
+
+    img {
+        width: 350px;
+        border-radius: 0.62em;
+        height: 350px;
+        object-fit: cover;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
