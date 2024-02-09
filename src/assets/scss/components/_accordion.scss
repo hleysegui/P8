@@ -12,6 +12,10 @@
         align-items: center;
         padding: 0px 1em;
         margin-bottom: 0px;
+
+        img {
+            cursor: pointer;
+        }
     }
 
     .accordion__body  {
