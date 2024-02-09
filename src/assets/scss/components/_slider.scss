@@ -1,0 +1,39 @@
+.slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__button {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        top: 240px;
+        column-gap: 65em;
+
+        img {
+            width: 4%;
+            height: 5%;
+        }
+
+    }
+
+    &__count {
+        position: relative;
+        top: 22.5em;
+        text-align: center;
+        color: $white-color;
+        @include title-small(18px, center, 25.67px)
+    }
+
+    &__image {
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: 415px;
+            border-radius: 25px;
+            object-fit: cover;
+        }
+        
+    }
+}

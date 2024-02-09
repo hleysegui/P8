@@ -1,0 +1,29 @@
+.accordion {
+
+    &__header {
+        background-color: $primary-color;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-radius: 5px;
+        @include title-medium(18px, 25.67px);
+        color: $white-color;
+        height: 52px;
+        align-items: center;
+        padding: 0px 1em;
+        margin-bottom: 0px;
+    }
+
+    .accordion__body  {
+        display: none;
+        background-color: $grey-color;
+        @include text-accordion;
+        padding: 1em;
+        border-radius: 10px 10px 5px 5px;
+    }
+    
+    .active {
+        display: block;
+    }
+}
+

@@ -16,7 +16,7 @@
         gap: 3em;
 
         a {
-            @include title-small;
+            @include title-small(24px, right, 34.22px);
             color: $dark-color;
         }
     }
