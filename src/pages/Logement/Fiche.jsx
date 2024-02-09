@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import { useState, useEffect } from "react"
 import { useAPI } from "../../services/apiContext"
 import Slider from "../../components/reusable/slider"
@@ -16,6 +16,7 @@ function Fiche() {
     const [currentLogementHost, setCurrentLogementHost] = useState([]); 
     const [currentLogementTags, setCurrentLogementTags] = useState([]); 
     const [currentLogementEquipements, setCurrentLogementEquipements] = useState([])
+    const navigate = useNavigate()
 
     const equipement = (
         <ul>
@@ -26,17 +27,17 @@ function Fiche() {
     )
 
     useEffect(() => {
-
-        const findById = logements.find((currentLogement) => currentLogement.id === id)
-        setCurrentLogement(findById)
-        setCurrentLogementPictures(findById.pictures)
-        setCurrentLogementHost(findById.host)
-        setCurrentLogementTags(findById.tags)
-        setCurrentLogementEquipements(findById.equipments)
-        
+        try {
+            const findById = logements.find((currentLogement) => currentLogement.id === id)
+            setCurrentLogement(findById)
+            setCurrentLogementPictures(findById.pictures)
+            setCurrentLogementHost(findById.host)
+            setCurrentLogementTags(findById.tags)
+            setCurrentLogementEquipements(findById.equipments)
+        } catch(err) {
+            navigate('*')
+        }
     },[id]);
-
-    console.log(currentLogement)
 
     return (
         <section className="caracteristique">
@@ -70,9 +71,7 @@ function Fiche() {
                     body={equipement}
                 />
             </div>
-            
         </section>
-        
       )
 }
 

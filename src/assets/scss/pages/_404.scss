@@ -1,0 +1,19 @@
+.error {
+    text-align: center;
+    margin-bottom: 3.5em;
+
+    h1 {
+        @include title-small(36px, center, 51.34px);
+        color: $primary-color;
+    }
+
+    &__404 {
+        display: block;
+        @include title-medium(288px, 410.69px);
+        color: $primary-color;
+    }
+    a {
+        color: rgba(0, 0, 0, 1);
+    }
+    
+}
