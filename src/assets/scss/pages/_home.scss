@@ -5,7 +5,7 @@
 .gallery {
     background-color: rgba(246, 246, 246, 1);
     border-radius: 1.56em;
-    padding: 4.68em 4.68em;
+    padding: 3em 3em;
     margin-bottom: 3.5em;
 
     &__container {
@@ -13,7 +13,6 @@
         flex-direction: row;
         flex-wrap: wrap;
         align-items: end;
-        gap: 4.85em;
-        margin-bottom: 3.25em;
+        column-gap: 3.7em;
     }
 }
