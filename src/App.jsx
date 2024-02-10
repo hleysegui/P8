@@ -2,7 +2,6 @@ import { Route, Routes } from "react-router"
 import About from "./pages/About/About"
 import Home from "./pages/Home/Home"
 import Error404 from "./pages/Error/Error404"
-import Fiche from "./pages/Logement/Fiche"
 import { APIContextProvider } from "./services/apiContext"
  
 function App() {
