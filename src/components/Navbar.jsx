@@ -6,7 +6,7 @@ function Navbar() {
 
         <header className="header">
             <nav className="nav">
-                <a className="nav__logo" href=""><img src={ logo } alt="kasa-logo"/></a>
+                <a className="nav__logo" href="/"><img src={ logo } alt="kasa-logo"/></a>
                 <ul className="nav__list">
                     <li className="nav__link"><NavLink to="/">Accueil</NavLink></li>
                     <li className="nav__link"><NavLink to="/about">A Propos</NavLink></li>
