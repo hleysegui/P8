@@ -416,8 +416,12 @@
   background-color: #000000;
   width: 100%;
   left: 0;
-  height: 13em;
-  text-align: center;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
 }
 
 .footer img {
@@ -434,6 +438,17 @@
   text-align: center;
 }
 
+@media screen and (max-width: 480px) {
+  .footer__copyright {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 17.11px;
+    text-align: center;
+    width: 34%;
+    margin-bottom: 1.5em;
+  }
+}
 .nav {
   display: flex;
   justify-content: space-between;

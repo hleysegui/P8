@@ -1,13 +1,16 @@
-@import '../abstracts/colors';
-@import '../abstracts/mixin';
+@import '../abstracts/index';
 
 .footer {
     position: absolute;
     background-color: $dark-color;
     width: 100%;
     left: 0;
-    height: 13em;
-    text-align: center;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
 
     img {
         margin-top: 5em;
@@ -17,5 +20,11 @@
         @include title-small(24px, center, 34.22px);
         color: white;
         text-align: center;
+        @media screen and (max-width: $breakpoint-mobile) {
+            @include title-small(12px, center, 17.11px);
+            width: 34%;
+            margin-bottom: 1.5em;
+        }
+        
     }
 }
