@@ -101,6 +101,11 @@
   align-items: center;
   height: 30%;
 }
+@media screen and (max-width: 480px) {
+  .caracteristique__general--owner {
+    width: 50%;
+  }
+}
 .caracteristique__general--owner span {
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
@@ -128,6 +133,12 @@
     width: 100%;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 480px) {
+  .caracteristique__satisfaction .rating {
+    width: 50%;
   }
 }
 .caracteristique__specificities {
