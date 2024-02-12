@@ -10,6 +10,11 @@
         top: 240px;
         column-gap: 65em;
 
+        @media screen and (max-width: $breakpoint-mobile) {
+            top: 170px;
+            column-gap: 12em;
+        }
+
         img {
             width: 4%;
             height: 5%;
@@ -23,7 +28,10 @@
         top: 22.5em;
         text-align: center;
         color: $white-color;
-        @include title-small(18px, center, 25.67px)
+        @include title-small(18px, center, 25.67px);
+        @media screen and (max-width: $breakpoint-mobile) {
+            display: none;
+        }
     }
 
     &__image {
@@ -34,6 +42,10 @@
             height: 415px;
             border-radius: 25px;
             object-fit: cover;
+
+            @media screen and (max-width: $breakpoint-mobile) {
+                height: 255px;
+            }
         }
         
     }
