@@ -1,5 +1,6 @@
 @import '../abstracts/mixin';
 @import '../abstracts/colors';
+@import '../abstracts/index';
 
 .nav {
     display: flex;
@@ -9,22 +10,34 @@
     &__logo {
         img {
             width: 100%;
+            @media screen and (max-width: $breakpoint-tablet) {
+                height: 48px;
+            }
         }
     }
     &__list {
         display: flex;
         gap: 3em;
 
+        @media screen and (max-width: $breakpoint-mobile) {
+            gap: 1em;
+        }
+
         a {
-            @include title-small(24px, right, 34.22px);
-            color: $dark-color;
+            @media media and (max-width: $breakpoint-mobile) {
+                font-size: 12px;
+            } 
         }
     }
     &__link {
         list-style: none;
 
         a {
-            text-decoration: none;
+            @include title-small(24px, right, 34.22px);
+            color: $dark-color;
+            @media screen and (max-width: $breakpoint-mobile) {
+                @include title-small(12px, right, 34.22px);
+            }
         }
 
         a:hover {

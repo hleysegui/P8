@@ -1,6 +1,8 @@
 .thumb {
-    width: 29%;
-    height: 26%;
+    width: 30.53%;
+    @media screen and (max-width: $breakpoint-laptop) {
+        width: 100%;
+    }
 
     &__title {
         display: block;
@@ -14,7 +16,7 @@
     }
 
     img {
-        width: 350px;
+        width: 100%;
         border-radius: 0.62em;
         height: 350px;
         object-fit: cover;

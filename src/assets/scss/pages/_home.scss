@@ -7,12 +7,23 @@
     border-radius: 1.56em;
     padding: 3em 3em;
     margin-bottom: 3.5em;
+    @media screen and (max-width: $breakpoint-tablet) {
+        all: unset;
+    }
 
     &__container {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         align-items: end;
-        column-gap: 3.7em;
+        column-gap: 2.9em;
+
+        @media screen and (max-width: $breakpoint-laptop) {
+            column-gap: 14.7em;
+        }
+        @media screen and (max-width: $breakpoint-mobile) {
+            flex-direction: column;
+            align-items: normal;
+        } 
     }
 }
