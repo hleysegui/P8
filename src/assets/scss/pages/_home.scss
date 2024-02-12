@@ -8,7 +8,8 @@
     padding: 3em 3em;
     margin-bottom: 3.5em;
     @media screen and (max-width: $breakpoint-tablet) {
-        all: unset;
+        background-color: transparent;
+        padding: 0;
     }
 
     &__container {
