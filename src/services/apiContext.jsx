@@ -11,9 +11,11 @@ const APIContext = createContext()
  */
 export function APIContextProvider({children}) {
     const [logements, setLogements] = useState([])
+    const [isError, setIsError] = useState(false)
 
     useEffect(() => {
         async function fetchData() {
+            setIsError(false)
             try {
                 const response = await fetch('http://localhost:8080/api/properties')
                 const data  = await response.json()
@@ -21,15 +23,21 @@ export function APIContextProvider({children}) {
                 setLogements(data)
             }
             catch(err) {
-                throw new Error(err)
+                setIsError(true)
             } 
         }
         fetchData()
     }, [logements])
 
+    const getLogementById = (id) => {
+        return logements.find((logement) => logement.id === id)
+    } 
+
     return (
         <APIContext.Provider value={{
-            logements
+            logements,
+            getLogementById,
+            isError
         }}>
             {children}
         </APIContext.Provider>

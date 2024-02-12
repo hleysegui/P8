@@ -17,7 +17,15 @@ function Accordion({header, body}) {
                 {isVisible ? <img src={arrowUp} alt=""/> : <img src={arrowDown} alt=""/>}
             </div>
             <div className={isVisible ? 'accordion__body' : 'accordion__body active'}>
-                <div>{body}</div>
+                {typeof body === 'string' 
+                ? <div>{body}</div> 
+                :   <ul>
+                    {body.map((equipment, index) => (
+                    <li key={`${equipment}-${index}`}>{equipment}</li>
+                )) }
+                </ul> 
+                }
+                
             </div>
         </div>
     )
