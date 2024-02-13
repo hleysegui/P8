@@ -9,12 +9,9 @@ import Accordion from "../../components/Accordion"
 
 function Logements() {
 
-  const { getLogementById } = useAPI()
-  const { error } = useAPI() 
+  const { getLogementById, isError } = useAPI()
   const { id } = useParams()
   const logement = getLogementById(id)
-
-    console.log(logement)
 
     if(!logement) {
       return <Error404 />
@@ -22,45 +19,8 @@ function Logements() {
 
     return (
       <>
-        {/* <main>
-          {!error ?
-            <section className="caracteristique">
-              <Slider 
-                picture={logement.pictures}
-                alt={logement.title}
-              />
-              <div className="caracteristique__general">
-                <div className="caracteristique__general--info">
-                    <h1>{logement.title}</h1>
-                    <span>{logement.location}</span>
-                </div>
-                <div className="caracteristique__general--owner">
-                <span className="general--owner-name">{logement.host.name}</span>
-                    {logement.host.picture === null 
-                    ? <img src={Host} alt={logement.host.name}/> 
-                    : <img src={logement.host.picture} alt={logement.host.name}/>}
-                </div>
-            </div>
-            <div className="caracteristique__satisfaction">
-                <Tags tags={logement.tags}/>
-                <Rating notation={logement.rating}/>
-            </div>
-            <div className="caracteristique__specificities">
-                <Accordion
-                    header="Description"
-                    body={logement.description}
-                />
-                <Accordion
-                    header="Équipements"
-                    body={logement.equipments}
-                />
-            </div>
-            </section>
-         : (<Error404 />) }
-        </main> */}
-
-<main>
-          {!error ?
+        <main>
+          {!isError ?
             <section className="caracteristique">
               <Slider 
                 picture={logement.pictures}
@@ -94,8 +54,6 @@ function Logements() {
                   />
                 </div>
             </div>
-              
-          
             </section>
          : (<Error404 />) }
         </main>

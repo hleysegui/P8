@@ -19,15 +19,25 @@
     }
 
     .accordion__body  {
-        display: none;
+        visibility: hidden;
         background-color: $grey-color;
         @include text-accordion;
         padding: 1em;
         border-radius: 10px 10px 5px 5px;
+        opacity: 0;
+        height: 0px;
+        transition-property: height, visibility, opacity;
+        transition-duration: 1000ms;
+        transition-timing-function: ease-out;
+      
     }
     
     .active {
-        display: block;
+        visibility: visible;
+        opacity: 1;
+        height: auto;
+        transition-property: height, opacity, visibility;
+        transition-duration: 1500ms;
+        transition-timing-function: ease-in;
     }
 }
-

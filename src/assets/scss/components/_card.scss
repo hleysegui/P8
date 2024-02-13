@@ -4,6 +4,12 @@
         width: 100%;
     }
 
+    &:hover {
+        transform: scale(1.1);
+        transition-duration: 2000ms;
+        opacity: 0.8;
+    }
+
     &__title {
         display: block;
         color: $white-color;

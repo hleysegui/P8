@@ -24,8 +24,8 @@
        position: absolute;
        @include title-medium(48px, 35px);
        color: white;
-       -webkit-text-stroke: $dark-color;
-       -webkit-text-stroke-width: 1px;
+       text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px  1px 0 #000, 1px  1px 0 #000;
+       
        @media screen and (max-width: $breakpoint-mobile) {
             @include title-medium(24px, 24px);
             display: flex;
@@ -38,4 +38,3 @@
         
     }
  }
- 

@@ -2,15 +2,18 @@ import Banner from "../../components/reusable/Banner"
 import { useAPI } from "../../services/apiContext"
 import bannerHome from '/src/assets/images/banner-home.png'
 import Card from '../../components/reusable/Card'
+import Spinner from "../../components/Spinner"
 
 function Home() {
 
-    const { logements } = useAPI()
+    const { logements, isLoading } = useAPI()
+    console.log(isLoading)
  
     return (
         <main>
            <Banner image={ bannerHome } span="Chez vous," text=" partout et ailleurs" />
             <div className="gallery">
+            { isLoading && <Spinner /> }
                 <div className="gallery__container">
                     {logements.map((logement) => (
                         <Card 
@@ -21,9 +24,8 @@ function Home() {
                         />
                     ))}
                 </div>
-            </div>
+            </div> 
         </main>
-       
     )
 }
 
