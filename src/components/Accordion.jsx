@@ -14,7 +14,7 @@ function Accordion({header, body}) {
         <div className="accordion">
             <div onClick={handleClick} className="accordion__header">
                 <h3>{header}</h3>
-                {isVisible ? <img src={arrowUp} alt=""/> : <img src={arrowDown} alt=""/>}
+                {isVisible ? <img src={arrowUp} alt="arrow-up"/> : <img src={arrowDown} alt="arrow-down"/>}
             </div>
             <div className={isVisible ? 'accordion__body' : 'accordion__body active'}>
                 {typeof body === 'string' 

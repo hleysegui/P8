@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect } from "react"
+import { createContext, useContext, useState, useEffect, useCallback } from "react"
 import React from "react"
 
 const APIContext = createContext()
@@ -14,26 +14,46 @@ export function APIContextProvider({children}) {
     const [isError, setIsError] = useState(false)
     const [isLoading, setIsLoading] = useState(true)
 
-    useEffect(() => {
-        async function fetchData() {
-            try {
-                const response = await fetch('http://localhost:8080/api/properties')
-                const data  = await response.json()
-                setLogements(data)
-            }
-            catch(err) {
-                setIsError(true)
-            } finally {
-                setIsLoading(false)
-            }
+    /* async function fetchData() {
+        try {
+            const response = await fetch('http://localhost:8080/api/properties')
+            const data  = await response.json()
+            setLogements(data)
         }
+        catch(err) {
+            setIsError(true)
+        } finally {
+            setIsLoading(false)
+        }
+    }
+ */
+    const fetchData = useCallback(async() => {
+        try {
+            const response = await fetch('http://localhost:8080/api/properties')
+            const data  = await response.json()
+            setLogements(data)
+
+        }
+        catch(err) {
+            setIsError(true)
+        } finally {
+            setIsLoading(false)
+        }
+    })
+
+    useEffect(() => {
         fetchData()
-        
     }, [logements])
 
-    const getLogementById = (id) => {
-        return logements.find((logement) => logement.id === id)
-    } 
+    const getLogementById = useCallback((id) => {
+        const logementById = logements.find((logement) => logement.id === id)
+        setIsError(false)
+        if(logementById === undefined) {
+            console.log(logementById)
+            setIsError(true)
+        }
+        return logementById
+    }) 
      
     return (
         <APIContext.Provider value={{

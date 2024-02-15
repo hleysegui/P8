@@ -7,7 +7,6 @@ import Spinner from "../../components/Spinner"
 function Home() {
 
     const { logements, isLoading } = useAPI()
-    console.log(isLoading)
  
     return (
         <main>

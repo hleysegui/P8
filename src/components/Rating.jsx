@@ -11,7 +11,7 @@ function Rating({notation}) {
                 <img key={i} src={starActive} alt={notation} />
             ))}
             {Array.from({ length: 5 - notation }, (n, i) => (
-                <img key={i} src={starInactive} alt={notation} />
+                <img key={i} src={starInactive} alt="inactive" />
             ))} 
         </div>
     )

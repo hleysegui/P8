@@ -6,15 +6,19 @@ import Host from '/src/assets/images/Host.svg'
 import Tags from "../../components/Tags"
 import Rating from "../../components/Rating"
 import Accordion from "../../components/Accordion"
+import Spinner from "../../components/Spinner.jsx"
 
 function Logements() {
 
-  const { getLogementById, isError } = useAPI()
+  const { getLogementById, isError, isLoading } = useAPI()
   const { id } = useParams()
   const logement = getLogementById(id)
 
-    if(!logement) {
+    /* if(!logement) {
       return <Error404 />
+    } */
+    if(isLoading) {
+      return <Spinner />
     }
 
     return (
