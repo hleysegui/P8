@@ -1,5 +1,6 @@
 import starInactive from 'src/assets/images/starInactive.svg'
 import starActive from 'src/assets/images/starActive.svg'
+import { PropTypes } from "prop-types"
 
 /**
  * Receive a number between 0 and 5 display star depends the notation
@@ -20,8 +21,8 @@ function Rating({notation}) {
     )
 }
 
-Banner.propTypes = {
-    notation: PropTypes.Number.isRequired,
+Rating.propTypes = {
+    notation: PropTypes.number.isRequired,
 }
 
 export default Rating
