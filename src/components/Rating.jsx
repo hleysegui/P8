@@ -1,7 +1,11 @@
-import { useState } from "react"
 import starInactive from 'src/assets/images/starInactive.svg'
 import starActive from 'src/assets/images/starActive.svg'
 
+/**
+ * Receive a number between 0 and 5 display star depends the notation
+ * @param {Number} notation 
+ * @returns {HTMLElement}
+ */
 function Rating({notation}) {
 
     return (
@@ -14,6 +18,10 @@ function Rating({notation}) {
             ))} 
         </div>
     )
+}
+
+Banner.propTypes = {
+    notation: PropTypes.Number.isRequired,
 }
 
 export default Rating

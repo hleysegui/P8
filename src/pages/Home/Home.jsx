@@ -4,6 +4,10 @@ import bannerHome from 'src/assets/images/banner-home.png'
 import Card from 'components/reusable/Card'
 import Spinner from "components/Spinner"
 
+/**
+ * Page d'accueil receive data from API for display list of all properties
+ * @returns {HTMLElement}
+ */
 function Home() {
 
     const { logements, isLoading } = useAPI()

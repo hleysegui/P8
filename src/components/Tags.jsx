@@ -1,5 +1,10 @@
 import PropTypes from 'prop-types'
 
+/**
+ * Loop on list of tags for display
+ * @param {Array} PropType receive a list of tags 
+ * @returns 
+ */
 function Tags({tags}) {
 
     return (

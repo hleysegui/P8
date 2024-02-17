@@ -5,7 +5,7 @@ import Accordion from "src/components/Accordion"
 import { describe, it } from "vitest"
 
 describe('About component', () => {
-    it('test exist child ', () => {
+    it('test if child exist ', () => {
         const wrapper = mount(<About />)
         expect(wrapper.findComponent(<Accordion />).exists()).toBe(false)
     })

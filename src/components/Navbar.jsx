@@ -1,9 +1,13 @@
 import { NavLink } from "react-router-dom"
 import logo from "src/assets/images/kasa-logo.svg"
 
+/**
+ * Navigation will be display on all pages
+ * @returns {HTMLElement}
+ */
 function Navbar() {
-    return (
 
+    return (
         <header className="header">
             <nav className="nav">
                 <a className="nav__logo" href="/"><img src={ logo } alt="kasa-logo"/></a>

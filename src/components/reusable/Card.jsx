@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 /**
  * Create components card for display properties
- * @param { number } id 
+ * @param { string } id 
  * @param { String } title
  * @param { String } cover
  * @returns {HTMLElement}

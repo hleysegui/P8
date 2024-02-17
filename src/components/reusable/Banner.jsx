@@ -2,7 +2,7 @@ import { PropTypes } from "prop-types"
 
 /**
  * Create banner image 
- * @returns 
+ * @returns {HTMLElement}
  */
 function Banner({image, span, text}) {
     

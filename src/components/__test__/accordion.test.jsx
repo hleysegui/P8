@@ -9,7 +9,7 @@ describe('Accordion test', () => {
         const user = userEvent.setup()
 
         render(<Accordion body={equipment}/>)
-        expect(screen.queryByAltText("arrow-down")).toBeNull()
+        expect(screen.queryByAltText("arrow-up open")).toBeNull()
         await user.click(screen.getByAltText("arrow-up"))
         expect(screen.queryByAltText("arrow-up")).toBeNull()
     })

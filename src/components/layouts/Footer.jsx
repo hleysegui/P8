@@ -1,5 +1,9 @@
 import logoWhite from "src/assets/images/kasa-logo-white.svg"
 
+/**
+ * Component for display footer on all page
+ * @returns {HTMLElement}
+ */
 function Footer() {
     return (
         <footer role="footer" className="footer">

@@ -3,6 +3,11 @@ import Banner from "components/reusable/Banner"
 import bannerAbout from 'src/assets/images/banner-about.png'
 import Accordion from "components/Accordion"
 
+/**
+ * Page wich render element from json file
+ * @returns {HTMLElement}
+ * @throws {NotFoundError} Call data failed 
+ */
 function About() {
 
     const [faqs, setFaqs] = useState([])
@@ -15,7 +20,7 @@ function About() {
                 setFaqs(data)
 
             }catch(err) {
-                console.log(err)
+                throw new Error(err)
             }
         }
         fetchData()

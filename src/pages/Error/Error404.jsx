@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 /**
  * When page not found show page error 404
- * @returns 
+ * @returns {HTMLElement}
  */
 function Error404() {
     return (

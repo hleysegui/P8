@@ -4,9 +4,9 @@ import React from "react"
 const APIContext = createContext()
 
 /**
- * Create context for call API 
+ * Create context for use API
  * @param {*} param0 
- * @returns { }
+ * @returns { Array }
  * @throws { NotFoundError } When we call the api and Something wrong
  */
 export function APIContextProvider({children}) {
@@ -19,7 +19,6 @@ export function APIContextProvider({children}) {
             const response = await fetch('http://localhost:8080/api/properties')
             const data  = await response.json()
             setLogements(data)
-
         }
         catch(err) {
             setIsError(true)

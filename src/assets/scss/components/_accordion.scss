@@ -16,6 +16,16 @@
         img {
             cursor: pointer;
         }
+
+        .arrow-up {
+            transform: rotate(0deg);
+            transition: transform 0.5s linear;
+          }
+          
+        .arrow-up.open {
+            transform: rotate(180deg);
+            transition: transform 0.5s linear;
+        }
     }
 
     .accordion__body  {

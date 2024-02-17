@@ -8,6 +8,10 @@ import Rating from "components/Rating"
 import Accordion from "components/Accordion"
 import Spinner from "components/Spinner.jsx"
 
+/**
+ * Get properties by id for display details
+ * @returns {HTMLElement}
+ */
 function Logement() {
 
   const { getLogementById, isError, isLoading } = useAPI()
