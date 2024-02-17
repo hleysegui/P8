@@ -1,22 +1,19 @@
 import { useParams } from "react-router-dom"
 import { useAPI } from "../../services/apiContext"
 import Error404 from "../Error/Error404.jsx"
-import Slider from "../../components/reusable/slider"
-import Host from '/src/assets/images/Host.svg'
-import Tags from "../../components/Tags"
-import Rating from "../../components/Rating"
-import Accordion from "../../components/Accordion"
-import Spinner from "../../components/Spinner.jsx"
+import Slider from "components/reusable/slider"
+import Host from 'src/assets/images/Host.svg'
+import Tags from "components/Tags"
+import Rating from "components/Rating"
+import Accordion from "components/Accordion"
+import Spinner from "components/Spinner.jsx"
 
-function Logements() {
+function Logement() {
 
   const { getLogementById, isError, isLoading } = useAPI()
   const { id } = useParams()
   const logement = getLogementById(id)
 
-    /* if(!logement) {
-      return <Error404 />
-    } */
     if(isLoading) {
       return <Spinner />
     }
@@ -65,4 +62,4 @@ function Logements() {
     )
   }
 
-  export default Logements
+  export default Logement

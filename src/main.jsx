@@ -5,7 +5,6 @@ import { BrowserRouter } from 'react-router-dom'
 import Navbar from './components/Navbar.jsx'
 import './assets/css/style.css'
 import Footer from './components/layouts/Footer.jsx'
-import Banner from './components/reusable/Banner.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

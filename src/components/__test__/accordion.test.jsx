@@ -1,8 +1,6 @@
-import { render, screen, renderHook } from "@testing-library/react"
-import { describe, expect, it } from "vitest"
+import { render, screen } from "@testing-library/react"
 import Accordion from "../Accordion"
 import userEvent from "@testing-library/user-event"
-import { act } from "@testing-library/react-hooks"
 
 describe('Accordion test', () => {
     const equipment = ["Clim", "Frigo", "micro-onde"]
@@ -11,8 +9,8 @@ describe('Accordion test', () => {
         const user = userEvent.setup()
 
         render(<Accordion body={equipment}/>)
-        expect(screen.queryByAltText("arrow-down")).not.toBeInTheDocument()
+        expect(screen.queryByAltText("arrow-down")).toBeNull()
         await user.click(screen.getByAltText("arrow-up"))
-        expect(screen.queryByAltText("arrow-down")).toBeInTheDocument()
+        expect(screen.queryByAltText("arrow-up")).toBeNull()
     })
 })

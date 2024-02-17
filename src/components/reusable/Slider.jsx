@@ -1,7 +1,7 @@
 import { useState } from "react"
 import PropTypes from 'prop-types' 
-import  rightArrow from "/src/assets/images/right-arrow.svg"
-import leftArrow  from "/src/assets/images/left-arrow.svg"
+import  rightArrow from "src/assets/images/right-arrow.svg"
+import leftArrow  from "src/assets/images/left-arrow.svg"
 
 
 function Slider({picture, alt}) {

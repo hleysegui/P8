@@ -1,8 +1,8 @@
-import Banner from "../../components/reusable/Banner"
+import Banner from "components/reusable/Banner"
 import { useAPI } from "../../services/apiContext"
-import bannerHome from '/src/assets/images/banner-home.png'
-import Card from '../../components/reusable/Card'
-import Spinner from "../../components/Spinner"
+import bannerHome from 'src/assets/images/banner-home.png'
+import Card from 'components/reusable/Card'
+import Spinner from "components/Spinner"
 
 function Home() {
 

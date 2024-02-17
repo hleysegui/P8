@@ -1,7 +1,6 @@
 import { useState } from "react"
-import starInactive from '/src/assets/images/starInactive.svg'
-import starActive from '/src/assets/images/starActive.svg'
-
+import starInactive from 'src/assets/images/starInactive.svg'
+import starActive from 'src/assets/images/starActive.svg'
 
 function Rating({notation}) {
 
@@ -18,5 +17,3 @@ function Rating({notation}) {
 }
 
 export default Rating
-
-

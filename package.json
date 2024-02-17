@@ -9,7 +9,8 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "scss": "node-sass -w scss -o css",
-    "test": "vitest --globals"
+    "test": "vitest --root src/",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^6.4.2",
@@ -24,7 +25,8 @@
     "react-dom": "^18.2.0",
     "react-helmet-async": "^2.0.4",
     "react-router-dom": "^6.21.3",
-    "sass": "^1.70.0"
+    "sass": "^1.70.0",
+    "vite-tsconfig-paths": "^4.3.1"
   },
   "devDependencies": {
     "@testing-library/react": "^14.2.1",

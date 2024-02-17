@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom'
 function Card({id, title, cover}) {
 
     return (
-        <div className='thumb'>
+        <div className='thumb' data-testid={id}>
             <Link to={ `/logement/${id}` } >
                 <span className='thumb__title'>{ title }</span>
                 <img src={ cover } alt={`Logement ${title}`} />
@@ -21,6 +21,7 @@ function Card({id, title, cover}) {
 }
 
 Card.propTypes = {
+    id: PropTypes.string,
     title: PropTypes.string.isRequired,
     cover: PropTypes.string.isRequired
 }

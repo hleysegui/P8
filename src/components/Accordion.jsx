@@ -1,6 +1,6 @@
 import { useState } from "react"
-import arrowUp from '/src/assets/images/up-arrow.svg'
-import arrowDown from '/src/assets/images/down-arrow.svg'
+import arrowUp from 'src/assets/images/up-arrow.svg'
+import arrowDown from 'src/assets/images/down-arrow.svg'
 
 function Accordion({header, body}) {
 

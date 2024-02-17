@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react"
-import Banner from "../../components/reusable/Banner"
-import bannerAbout from '/src/assets/images/banner-about.png'
-import Accordion from "../../components/Accordion"
-import { Exception } from "sass"
+import Banner from "components/reusable/Banner"
+import bannerAbout from 'src/assets/images/banner-about.png'
+import Accordion from "components/Accordion"
 
 function About() {
 
@@ -11,12 +10,12 @@ function About() {
     useEffect(() => {
         async function fetchData() {
             try {
-                const response = await fetch('../data/about.json')
+                const response = await fetch('/data/about.json')
                 const data = await response.json()
                 setFaqs(data)
 
             }catch(err) {
-                throw new Exception(err)
+                console.log(err)
             }
         }
         fetchData()

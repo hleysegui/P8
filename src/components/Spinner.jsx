@@ -1,4 +1,4 @@
-import spinner from '/src/assets/images/spinner.svg'
+import spinner from 'src/assets/images/spinner.svg'
 
 function Spinner() {
 

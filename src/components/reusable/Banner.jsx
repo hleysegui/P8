@@ -9,7 +9,7 @@ function Banner({image, span, text}) {
     return (
         <div className="banner">
            <div className="banner__content">
-            <img src={ image } alt="image banniere" />
+            <img src={ image } alt="image-banniere" />
             { text ? (<h1><span>{ span }</span>{ text }</h1>) : " " }
            </div>
         </div>
@@ -18,7 +18,8 @@ function Banner({image, span, text}) {
 
 Banner.propTypes = {
     image: PropTypes.string.isRequired,
-    text:  PropTypes.string
+    text: PropTypes.string,
+    span: PropTypes.string,
 }
 
 export default Banner
