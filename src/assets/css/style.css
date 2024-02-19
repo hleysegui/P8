@@ -165,32 +165,6 @@
   }
 }
 
-.tags ul {
-  display: flex;
-  flex-direction: row;
-  column-gap: 1em;
-  padding-left: 0px;
-}
-.tags li {
-  background-color: #FF6060;
-  padding: 0.4em 2em;
-  border-radius: 14px;
-  color: #FFFFFF;
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 19.96px;
-}
-@media screen and (max-width: 480px) {
-  .tags li {
-    font-family: "Montserrat", sans-serif;
-    font-size: 10px;
-    font-weight: 700;
-    line-height: 14.26px;
-    padding: 0.4em 1.2em;
-  }
-}
-
 .accordion__content {
   display: flex;
   flex-direction: column;
