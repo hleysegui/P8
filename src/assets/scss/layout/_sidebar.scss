@@ -37,6 +37,7 @@
             color: $dark-color;
             @media screen and (max-width: $breakpoint-mobile) {
                 @include title-small(12px, right, 34.22px);
+                text-transform: uppercase ;
             }
         }
 

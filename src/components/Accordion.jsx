@@ -1,5 +1,6 @@
 import { useState } from "react"
 import arrowUp from 'src/assets/images/up-arrow.svg'
+import { PropTypes } from "prop-types"
 
 /**
  * Component Accordion the content is hidden and after click become visible
@@ -17,7 +18,7 @@ function Accordion({header, body}) {
 
     const rotated = event => {
         setIsVisible(current => !current)
-        var arrow = event.target
+        const arrow = event.target
         {isVisible ? arrow.className = "arrow-up open" : arrow.className = "arrow-up" }
         {isVisible ? arrow.alt = "arrow-up open" : arrow.alt = "arrow-up" }
         setIsVisible(current => !current)
@@ -42,6 +43,14 @@ function Accordion({header, body}) {
             </div>
         </div>
     )
+}
+
+Accordion.propTypes = {
+    header: PropTypes.string.isRequired,
+    body: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.array,
+    ])
 }
 
 export default Accordion

@@ -1,11 +1,11 @@
-import { createContext, useContext, useState, useEffect, useCallback } from "react"
+import { createContext, useContext, useState, useEffect, useCallback, Component } from "react"
 import React from "react"
 
 const APIContext = createContext()
 
 /**
  * Create context for use API
- * @param {*} param0 
+ * @param {Component} return a child component 
  * @returns { Array }
  * @throws { NotFoundError } When we call the api and Something wrong
  */
@@ -33,10 +33,13 @@ export function APIContextProvider({children}) {
 
     const getLogementById = useCallback((id) => {
         const logementById = logements.find((logement) => logement.id === id)
-        setIsError(false)
-        if(logementById === undefined) {
-            setIsError(true)
-        }
+
+        useEffect(() => {
+            setIsError(false)
+            if(logementById === undefined) {
+                setIsError(true)
+            }
+        })        
         return logementById
     }) 
      

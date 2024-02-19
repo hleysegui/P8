@@ -1,6 +1,7 @@
 import { useState } from "react"
 import  rightArrow from "src/assets/images/right-arrow.svg"
 import leftArrow  from "src/assets/images/left-arrow.svg"
+import { PropTypes } from "prop-types"
 
 /**
  * Get an array with picture for create slider
@@ -36,5 +37,10 @@ function Slider({picture, alt}) {
         
     )
 } 
+
+Slider.propTypes = {
+    picture: PropTypes.array.isRequired,
+    alt: PropTypes.string,
+}
 
 export default Slider

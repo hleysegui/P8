@@ -4,7 +4,7 @@ import { PropTypes } from "prop-types"
 
 /**
  * Receive a number between 0 and 5 display star depends the notation
- * @param {Number} notation 
+ * @param {string} notation 
  * @returns {HTMLElement}
  */
 function Rating({notation}) {
@@ -22,7 +22,7 @@ function Rating({notation}) {
 }
 
 Rating.propTypes = {
-    notation: PropTypes.number.isRequired,
+    notation: PropTypes.string.isRequired,
 }
 
 export default Rating
